@@ -218,14 +218,17 @@ nav a:hover { color: #c97a7e; }
 .trust-section { max-width: 700px; margin: 0 auto; }
 .insta-btn {
     display: inline-block; 
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: white; 
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    color: #ffffff !important; 
     text-decoration: none; 
-    padding: 12px 24px; 
+    padding: 14px 28px; 
     border-radius: 30px; 
     font-weight: bold; 
-    margin-top: 10px;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(220, 39, 67, 0.2);
+    text-align: center;
 }
+
 .eco-note { font-size: 0.8rem; color: #8c7674; margin-top: 10px; }
 
 footer { text-align: center; padding: 35px 20px; background-color: #ffffff; color: #a89492; border-top: 1px solid #ebdcd0; }
