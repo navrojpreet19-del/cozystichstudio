@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-<title>Handmade Crochet Bags, Bouquets & Custom Gift Packages | Cozy Heirloom</title>
+    <title>Handmade Crochet Bags, Bouquets & Custom Gift Packages | Cozy Heirloom</title>
 
     <meta name="description" content="Shop stunning handmade crochet granny square bags, aesthetic flower bouquets, and cozy custom cardigans. Beautiful gift sets with handwritten notes available.">
     <meta name="keywords" content="crochet granny square bag, crochet flower bouquet, handmade crochet cardigan, custom crochet gift set">
@@ -13,13 +13,20 @@
 </head>
 <body>
 
+    <!-- 📌 STICKY NAVIGATION HEADER WITH WHATSAPP LINK -->
     <header>
         <div class="logo">Cozy Heirloom</div>
         <nav>
             <a href="#shop">Shop Collections</a>
             <a href="#gifts">Gift Packages</a>
+            <a href="#order-section">Place Order</a>
             <a href="#faq">FAQ</a>
-            <a href="#insta-orders">Instagram Reviews</a>
+            <!-- Direct Indian WhatsApp Connection -->
+            <a href="https://wa.me." 
+               target="_blank" 
+               class="whatsapp-nav-btn">
+               💬 WhatsApp Chat
+            </a>
         </nav>
     </header>
 
@@ -28,7 +35,7 @@
         <section class="hero fade-in">
             <h1>Aesthetic Handmade Crochet Essentials & Gift Sets</h1>
             <p>Lovingly handcrafted granny square bags, beautiful everlasting bouquets, and tailor-made cardigans built for comfort.</p>
-            <a href="#shop" class="cta-btn float-animation">Explore Collections</a>
+            <a href="#order-section" class="cta-btn float-animation">Place Custom Order</a>
         </section>
 
         <!-- Product Grid Section -->
@@ -81,26 +88,68 @@
                     </ul>
                 </div>
 
-                <!-- Upgraded Functional Checkout Form -->
-                <div class="gift-form">
-                    <label for="gift-note">Add a Free Handwritten Note Message:</label>
-                    <textarea id="gift-note" rows="3" placeholder="Type the special message you want written out here..."></textarea>
-                    
-                    <div class="payment-checkout-box">
-                        <h4>Secure Checkout Options:</h4>
-                        <p class="price-display">Total Package Price: <strong>$35.00 / ₹2,900</strong></p>
-                        <button id="paypal-checkout-btn" class="pay-btn paypal-btn">Pay securely via PayPal</button>
-                        <button id="gpay-checkout-btn" class="pay-btn gpay-btn">Buy instantly with GPay / UPI</button>
-                    </div>
-                    
-                    <!-- Alert dynamic message for processing -->
-                    <div id="confirmation-msg" class="hidden-msg"></div>
+                <div class="gift-feature">
+                     <h3>Pricing Details:</h3>
+                     <p class="price-display">Base Collection Pricing: <strong>$35.00 / ₹2,900</strong></p>
+                     <p>Fill out the order form below to reserve your slot, select custom colors, and provide shipping details!</p>
                 </div>
             </div>
         </section>
 
+        <!-- 🛍️ DYNAMIC NETLIFY CUSTOM ORDER FORM SECTION -->
+        <section id="order-section" class="section-container">
+            <div class="order-container">
+                <h2>Place Your Crochet Order</h2>
+                <p>Fill out the details below, and I will contact you to finalize your custom piece!</p>
+
+                <form name="crochet-orders" method="POST" data-netlify="true">
+                    <!-- Hidden input for Netlify bot discovery -->
+                    <input type="hidden" name="form-name" value="crochet-orders" />
+
+                    <!-- Customer Name -->
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div class="form-group">
+                        <label for="phone">WhatsApp / Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g., +91 9988773411" required />
+                    </div>
+
+                    <!-- Product Selection Dropdown -->
+                    <div class="form-group">
+                        <label for="product">Select Product Category *</label>
+                        <select id="product" name="product" required>
+                            <option value="" disabled selected>Choose an item...</option>
+                            <option value="flower-bouquet">Cute Flower Bouquet</option>
+                            <option value="granny-square-bag">Granny Square Bag</option>
+                            <option value="exclusive-sling-bag">Small Exclusive Sling Bag</option>
+                            <option value="custom-cardigan">Custom Crochet Cardigan</option>
+                        </select>
+                    </div>
+
+                    <!-- Customizations -->
+                    <div class="form-group">
+                        <label for="details">Custom Details (Size, Yarn Colors, Notes)</label>
+                        <textarea id="gift-note" name="details" rows="3" placeholder="Type preferred yarn colors, cardigan sizes (S, M, L), or custom gift box ribbon messages here..."></textarea>
+                    </div>
+
+                    <!-- Delivery Address -->
+                    <div class="form-group">
+                        <label for="address">Shipping Address *</label>
+                        <textarea id="address" name="address" rows="3" placeholder="Enter your complete delivery address" required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">Submit Order Request</button>
+                </form>
+            </div>
+        </section>
+
         <!-- Interactive FAQ Section -->
-        <section id="faq" class="section-container">
+        <section id="faq" class="section-container alternative-bg">
             <h2>Frequently Asked Questions</h2>
             <p class="section-subtitle">Everything you need to know about our handcrafted orders.</p>
             
@@ -115,7 +164,7 @@
                 <details class="faq-item">
                     <summary>Can I request custom yarn colors for bags and cardigans?</summary>
                     <div class="faq-answer">
-                        <p>Yes, absolutely! We love custom requests. You can write your color choices directly in the note section when ordering, or drop us a DM on Instagram to pick your exact yarn colors before checkout.</p>
+                        <p>Yes, absolutely! We love custom requests. You can write your color choices directly in the custom details form section above, or drop us a DM on Instagram to pick your exact yarn colors before checkout.</p>
                     </div>
                 </details>
 
@@ -128,19 +177,7 @@
             </div>
         </section>
 
-        <!-- Trust Building / Instagram Section using your handle -->
+        <!-- Trust Building / Instagram Section -->
         <section id="insta-orders" class="section-container trust-section">
             <h2>Prefer Booking via Social Media? 📸</h2>
-            <p>Building trust with you is our absolute priority! If you want to see live customer reviews, custom yarn choices, or message us directly for custom pricing, we accept orders straight through our Instagram direct messages.</p>
-            <a href="https://www.instagram.com/rozpreet_?srtk=MTRwdHBpZDM4c2t5YQ==" id="insta-link" class="insta-btn" target="_blank">DM Us @rozpreet_ to Order</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Cozy Heirloom. Handcrafted with love.</p>
-        <p class="eco-note">🌱 100% Recyclable, Eco-Conscious Box & Packaging Material</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+            
