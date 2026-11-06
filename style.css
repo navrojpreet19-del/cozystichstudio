@@ -237,6 +237,14 @@ footer { text-align: center; padding: 35px 20px; background-color: #ffffff; colo
     .gift-feature { flex: 1; }
     .hero h1 { font-size: 2.6rem; }
 }
+/* Premium Pricing Callout Styles */
+.price-display {
+    font-size: 1.15rem;
+    color: #704245;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
 /* ========================================== */
 /* ✨ PREMIUM USER EXPERIENCE POLISHINGS      */
 /* ========================================== */
