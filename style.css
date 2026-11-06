@@ -298,3 +298,15 @@ footer { text-align: center; padding: 35px 20px; background-color: #ffffff; colo
         font-size: 16px !important;
     }
 }
+/* ✨ FLOATING BUTTON ANIMATION */
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Apply the animation to the CTA button */
+.cta-btn.floating {
+    animation: floatAnimation 3s ease-in-out infinite;
+    display: inline-block !important; /* Ensures the transform properties move smoothly */
+}
