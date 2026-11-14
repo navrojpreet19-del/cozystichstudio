@@ -635,3 +635,175 @@ footer { text-align: center; padding: 35px 20px; background-color: #ffffff; colo
         padding: 20px;
     }
 }
+
+/* COZY HEIRLOOM GIFT STUDIO */
+
+.gift-studio {
+  padding: 65px 20px;
+  background: linear-gradient(145deg, #faf7f2, #f3e6de);
+  text-align: center;
+}
+
+.studio-heading {
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.studio-heading h2 {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  color: #704245;
+  margin: 12px 0;
+}
+
+.studio-heading p,
+.gift-items > p,
+.gift-box-area > p {
+  color: #8c7674;
+  line-height: 1.7;
+}
+
+.studio-layout {
+  max-width: 950px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 25px;
+  align-items: stretch;
+}
+
+.gift-items,
+.gift-box-area {
+  background: rgba(255,255,255,0.72);
+  padding: 25px;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(112,66,69,0.08);
+}
+
+.gift-items h3,
+.gift-box-area h3 {
+  color: #704245;
+  font-family: Georgia, serif;
+  font-size: 1.35rem;
+}
+
+.gift-item {
+  width: 100%;
+  margin: 9px 0;
+  padding: 14px;
+  border: 1px solid #ead6d0;
+  border-radius: 14px;
+  background: #fffaf7;
+  color: #704245;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: grab;
+  transition: 0.25s ease;
+}
+
+.gift-item:hover {
+  transform: translateY(-3px);
+  background: #f3e6de;
+  box-shadow: 0 5px 14px rgba(112,66,69,0.10);
+}
+
+.gift-item:active {
+  cursor: grabbing;
+}
+
+.gift-box {
+  min-height: 260px;
+  margin: 25px auto 15px;
+  padding: 25px 15px;
+  border: 3px dashed #c97a7e;
+  border-radius: 18px;
+  background: #fff8f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: 0.25s ease;
+}
+
+.gift-box.drag-over {
+  background: #f3e6de;
+  border-style: solid;
+  transform: scale(1.02);
+}
+
+.box-placeholder span {
+  font-size: 3.5rem;
+}
+
+.box-placeholder p {
+  color: #8c7674;
+}
+
+#gift-box-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.selected-gift {
+  background: #f3e6de;
+  color: #704245;
+  border: 1px solid #c97a7e;
+  border-radius: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
+  animation: giftPop 0.35s ease;
+}
+
+.selected-gift:hover {
+  background: #ead6d0;
+}
+
+.clear-gift-btn {
+  background: transparent;
+  color: #8c7674;
+  border: 1px solid #c97a7e;
+  padding: 9px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.gift-studio-footer {
+  max-width: 700px;
+  margin: 30px auto 0;
+}
+
+#studio-summary {
+  color: #704245;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+@keyframes giftPop {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 700px) {
+  .studio-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .studio-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .gift-studio {
+    padding: 45px 15px;
+  }
+}
