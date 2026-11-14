@@ -34,7 +34,7 @@
     <main>
         <!-- Hero Section -->
       
-<section class="hero fade-in">
+< class="hero fade-in">
     <div class="hero-content">
         <span class="hero-label">THOUGHTFULLY HANDMADE, BEAUTIFULLY GIFTED</span>
 
@@ -54,8 +54,97 @@
 
             <a href="#order-section" class="secondary-btn">
                 Create Your Own Gift
-            </a>
+              </a>
         </div>
+    </div>
+    </section>
+              
+<!-- BUILD YOUR OWN GIFT -->  
+              
+<section id="custom-gift" class="section-container custom-gift-section">
+
+    <span class="gift-eyebrow">YOUR THOUGHTS, OUR HANDMADE TOUCH</span>
+
+    <h2>Create Your Own Gift Box</h2>
+
+    <p class="section-subtitle">
+        Pick the little things they love. We'll bring them together
+        into something beautiful.
+    </p>
+
+    <div class="custom-gift-box">
+
+        <div class="custom-gift-intro">
+            <span class="custom-gift-emoji">🎁</span>
+            <h3>A gift made just for them</h3>
+            <p>Make your own combination of handmade surprises.</p>
+        </div>
+
+        <div class="form-group">
+            <label for="flower-count">1. How many crochet flowers?</label>
+            <select id="flower-count">
+                <option value="No flowers">No flowers</option>
+                <option value="3 flowers">3 flowers</option>
+                <option value="5 flowers">5 flowers</option>
+                <option value="7 flowers">7 flowers</option>
+                <option value="9 flowers">9 flowers</option>
+                <option value="Custom flower quantity">Custom quantity</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="crochet-gift">2. Choose a crochet gift</label>
+            <select id="crochet-gift">
+                <option value="No additional crochet item">No additional item</option>
+                <option value="Mini crochet sling bag">Mini sling bag</option>
+                <option value="Crochet handbag">Crochet handbag</option>
+                <option value="Crochet cardigan">Crochet cardigan</option>
+                <option value="Personalised crochet accessory">Other personalised accessory</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="chocolate-choice">3. Add something sweet?</label>
+            <select id="chocolate-choice">
+                <option value="No chocolates">No chocolates</option>
+                <option value="Chocolates included">Yes, add chocolates</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="packaging-choice">4. Choose your packaging</label>
+            <select id="packaging-choice">
+                <option value="Standard gift wrapping">Standard gift wrapping</option>
+                <option value="Premium gift box">Premium gift box</option>
+                <option value="Custom packaging request">Custom packaging request</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="personal-message">
+                5. Your personal message
+            </label>
+            <textarea id="personal-message" rows="3"
+                placeholder="Write a little something for your special person..."></textarea>
+        </div>
+
+        <div class="custom-gift-summary">
+            <h3>Your gift selection 💝</h3>
+            <p id="gift-summary">
+                Your personalised gift details will appear here.
+            </p>
+        </div>
+
+        <button type="button" class="submit-btn"
+            id="continue-custom-gift">
+            Continue to Order Form →
+        </button>
+
+        <p class="custom-gift-note">
+            Every gift is made to order. Final pricing will be confirmed
+            according to your selections.
+        </p>
+
     </div>
 </section>
 
