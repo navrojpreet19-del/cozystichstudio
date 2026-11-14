@@ -396,3 +396,137 @@ footer { text-align: center; padding: 35px 20px; background-color: #ffffff; colo
         max-width: 270px;
     }
 }
+
+/* ===== COZY HEIRLOOM GIFT COLLECTION ===== */
+
+.gift-collection {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.gift-eyebrow {
+    color: #a66e72;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.gift-collection h2 {
+    font-family: Georgia, serif;
+    color: #704245;
+    font-size: 2rem;
+    margin: 12px 0;
+}
+
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1050px;
+    margin: 35px auto 0;
+    text-align: left;
+}
+
+.gift-card {
+    background: #fff;
+    border: 1px solid #ebdcd0;
+    border-radius: 16px;
+    padding: 27px 22px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 18px rgba(112, 66, 69, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gift-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(112, 66, 69, 0.10);
+}
+
+.gift-icon {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.gift-number {
+    color: #b77c80;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.gift-card h3 {
+    font-family: Georgia, serif;
+    color: #704245;
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+.gift-description {
+    color: #806e67;
+    font-size: 13px;
+    min-height: 55px;
+}
+
+.gift-card ul {
+    padding-left: 18px;
+    color: #5c4e4d;
+    font-size: 13px;
+    line-height: 1.8;
+    flex-grow: 1;
+}
+
+.gift-card li {
+    margin-bottom: 7px;
+}
+
+.gift-price {
+    color: #704245;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.gift-btn {
+    display: block;
+    text-align: center;
+    background: #c97a7e;
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 12px;
+    transition: background 0.2s ease;
+}
+
+.gift-btn:hover {
+    background: #a95f64;
+}
+
+.featured-gift {
+    background: #fffaf7;
+    border: 1px solid #d9b2ae;
+}
+
+.gift-footer-note {
+    color: #8c7674;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+@media (max-width: 750px) {
+    .gift-grid {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+    }
+
+    .gift-description {
+        min-height: auto;
+    }
+
+    .gift-card {
+        padding: 25px;
+    }
+}
