@@ -172,7 +172,254 @@ nav a:hover { color: #c97a7e; }
     box-shadow: 0 4px 12px rgba(112, 66, 69, 0.02);
 }
 
-.order-container h2 { color: #704245; margin-bottom: 8px; text-align: center; }
+.order-container h2 { color: #704245; margin-bott
+/* COZY HEIRLOOM - VISUAL GIFT TABLE */
+
+.gift-studio {
+  padding: 65px 18px;
+  background: #faf4ef;
+  text-align: center;
+  overflow: hidden;
+}
+
+.studio-heading {
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
+
+.studio-heading h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  color: #704245;
+  margin: 12px 0;
+}
+
+.studio-heading p {
+  color: #8c7674;
+  line-height: 1.7;
+}
+
+.gift-table {
+  position: relative;
+  max-width: 850px;
+  min-height: 570px;
+  margin: auto;
+  border-radius: 28px;
+  background:
+    radial-gradient(ellipse at center, #fffaf6 0%, #f5e7df 75%);
+  border: 1px solid #ead6d0;
+  box-shadow: 0 15px 40px rgba(112,66,69,.08);
+}
+
+/* THE OPEN GIFT BOX */
+
+.visual-gift-box {
+  position: absolute;
+  width: 290px;
+  height: 265px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #d99a9b;
+  border: 9px solid #bd777d;
+  border-radius: 12px;
+  box-shadow: 0 13px 0 #a9636b, 0 20px 30px #70424530;
+  z-index: 2;
+  transition: .25s ease;
+}
+
+.box-inner {
+  position: absolute;
+  inset: 13px;
+  background: #f8e5dc;
+  border: 2px solid #e4b6ae;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.box-title {
+  font-family: Georgia, serif;
+  color: #704245;
+  font-size: 1.2rem;
+}
+
+.box-hint {
+  color: #a17c79;
+  font-size: .85rem;
+}
+
+.box-ribbon {
+  position: absolute;
+  width: 35px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background: #f1c6bd;
+  opacity: .7;
+  pointer-events: none;
+}
+
+#gift-box-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 0;
+  position: relative;
+  z-index: 3;
+}
+
+.inside-gift {
+  background: #fffaf7;
+  padding: 8px;
+  border-radius: 12px;
+  color: #704245;
+  font-size: .8rem;
+  box-shadow: 0 3px 8px #70424520;
+}
+
+/* SCATTERED GIFT OBJECTS */
+
+.gift-object {
+  position: absolute;
+  width: 125px;
+  min-height: 115px;
+  padding: 10px;
+  border-radius: 20px;
+  background: #fffaf7;
+  border: 1px solid #ead6d0;
+  box-shadow: 0 7px 18px #70424518;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  z-index: 4;
+  transition: box-shadow .2s, transform .2s;
+}
+
+.gift-object:hover {
+  transform: translateY(-5px) rotate(-2deg);
+  box-shadow: 0 12px 22px #70424525;
+}
+
+.gift-object:active {
+  cursor: grabbing;
+}
+
+.object-art {
+  font-size: 3.4rem;
+  line-height: 1.3;
+}
+
+.object-name {
+  font-size: .78rem;
+  color: #704245;
+  font-weight: 600;
+}
+
+.bouquet-object {
+  left: 7%;
+  top: 7%;
+  transform: rotate(-7deg);
+}
+
+.chocolate-object {
+  right: 8%;
+  top: 8%;
+  transform: rotate(6deg);
+}
+
+.bag-object {
+  left: 5%;
+  bottom: 8%;
+  transform: rotate(5deg);
+}
+
+.note-object {
+  right: 8%;
+  bottom: 8%;
+  transform: rotate(-5deg);
+}
+
+.ribbon-object {
+  left: 50%;
+  bottom: 2%;
+  transform: translateX(-50%) rotate(3deg);
+}
+
+.gift-object.is-dragging {
+  z-index: 20;
+  transform: scale(1.08);
+  box-shadow: 0 15px 30px #70424535;
+}
+
+.visual-gift-box.drag-over {
+  transform: translate(-50%, -50%) scale(1.04);
+  box-shadow: 0 0 0 5px #c97a7e50, 0 13px 0 #a9636b;
+}
+
+.gift-studio-footer {
+  max-width: 650px;
+  margin: 30px auto 0;
+}
+
+#studio-summary {
+  color: #704245;
+  line-height: 1.8;
+}
+
+.clear-gift-btn {
+  padding: 11px 22px;
+  margin: 8px;
+  border: 1px solid #c97a7e;
+  background: transparent;
+  color: #704245;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+  .gift-table {
+    min-height: 510px;
+  }
+
+  .visual-gift-box {
+    width: 215px;
+    height: 220px;
+  }
+
+  .gift-object {
+    width: 95px;
+    min-height: 90px;
+    padding: 7px;
+  }
+
+  .object-art {
+    font-size: 2.5rem;
+  }
+
+  .object-name {
+    font-size: .68rem;
+  }
+
+  .bouquet-object { left: 2%; top: 5%; }
+  .chocolate-object { right: 2%; top: 5%; }
+  .bag-object { left: 2%; bottom: 7%; }
+  .note-object { right: 2%; bottom: 7%; }
+  .ribbon-object { bottom: 0; }
+}
+om: 8px; text-align: center; }
 .order-container p { color: #8c7674; text-align: center; margin-bottom: 24px; font-size: 13px; }
 
 .form-group { margin-bottom: 18px; text-align: left; }
