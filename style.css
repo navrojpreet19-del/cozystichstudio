@@ -1054,3 +1054,15 @@ footer { text-align: center; padding: 35px 20px; background-color: #ffffff; colo
     padding: 45px 15px;
   }
 }
+.visual-gift-box {
+  display: block !important;
+  position: absolute !important;
+  width: 290px !important;
+  height: 265px !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  background: pink !important;
+  border: 8px solid brown !important;
+  z-index: 999 !important;
+}
