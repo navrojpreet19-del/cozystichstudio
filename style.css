@@ -1255,3 +1255,48 @@ footer { text-align: center; padding: 35px 20px; background-color: #ffffff; colo
     height: 85px;
   }
 }
+
+/* SCRAPBOOK GIFT ELEMENTS */
+
+.gift-object {
+  width: 145px;
+  min-height: 145px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 5px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.sticker-art {
+  display: block;
+  width: 130px;
+  height: 130px;
+  overflow: visible;
+  filter: drop-shadow(2px 5px 4px rgba(112,66,69,.17));
+  transition: transform .25s ease;
+}
+
+.gift-object:hover .sticker-art {
+  transform: translateY(-5px) rotate(-4deg);
+}
+
+.gift-object .object-name {
+  color: #704245;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media(max-width:600px) {
+  .gift-object {
+    width: 105px;
+    min-height: 115px;
+  }
+
+  .sticker-art {
+    width: 95px;
+    height: 95px;
+  }
+}
