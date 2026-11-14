@@ -459,7 +459,7 @@ nav a:hover { color: #c97a7e; }
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
-.submit-btn:hover { background-color: #b3666a; }
+
 
 /* ✕ FAQ ACCORDIONS */
 .faq-container { max-width: 700px; margin: 0 auto; text-align: left; }
