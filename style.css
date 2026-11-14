@@ -1,183 +1,521 @@
-/* Core Framework Options */
-* { box-sizing: border-box; }
+
+/* =========================================
+   COZY HEIRLOOM — COMPLETE STYLESHEET
+   ========================================= */
+
+/* CORE FRAMEWORK */
+
+* {
+  box-sizing: border-box;
+}
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0; padding: 0;
-    font-family: system-ui, -apple-system, sans-serif;
-    background-color: #faf7f2;
-    color: #4a3e3d;
-    line-height: 1.6;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #faf7f2;
+  color: #4a3e3d;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* 📌 STICKY NAVIGATION STYLING */
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* =========================================
+   HEADER AND NAVIGATION
+   ========================================= */
+
 header {
-    background-color: #ffffff; 
-    padding: 15px  20px; 
-    text-align: center;
-    border-bottom: 1px solid #ebdcd0; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(112, 66, 69, 0.04);
+  background-color: #ffffff;
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ebdcd0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(112, 66, 69, 0.04);
 }
 
-.logo { 
-    font-size: 1.6rem; 
-    font-weight: bold; 
-    color: #c97a7e; 
-    margin-bottom: 12px; 
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #c97a7e;
+  margin-bottom: 12px;
 }
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 
-nav a { 
-    text-decoration: none; 
-    color: #8c7674; 
-    font-weight: 500;
-    font-size: 0.95rem;
+nav a {
+  text-decoration: none;
+  color: #8c7674;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
-nav a:hover { color: #c97a7e; }
+nav a:hover {
+  color: #c97a7e;
+}
 
-/* WhatsApp Premium Nav Button */
 .whatsapp-nav-btn {
-    background-color: #25d366;
-    color: #ffffff !important;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.85rem;
-    transition: background-color 0.2s ease;
+  background-color: #25d366;
+  color: #ffffff !important;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+  animation: whatsappPulse 2s infinite;
 }
 
-.whatsapp-nav-btn:hover { background-color: #128c7e; }
+.whatsapp-nav-btn:hover {
+  background-color: #128c7e;
+}
 
-/* 🌟 HERO COMPONENT */
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
 .hero {
-    text-align: center; 
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #fdf8f5 0%, #f3e6de 100%);
-    border-bottom: 1px solid #ebdcd0;
+  text-align: center;
+  padding: 85px 22px;
+  background: linear-gradient(
+    135deg,
+    #faf7f2 0%,
+    #f3e6de 55%,
+    #f8eeea 100%
+  );
+  border-bottom: 1px solid #ebdcd0;
 }
-.hero h1 { font-size: 2rem; color: #704245; margin-bottom: 15px; line-height: 1.3; }
-.hero p { max-width: 600px; margin: 0 auto 25px auto; font-size: 1rem; color: #6e5d5c; }
 
-/* Main Hero CTA Button Fix */
+.hero-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.hero-label {
+  display: inline-block;
+  color: #a66e72;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(2.3rem, 6vw, 3.8rem);
+  line-height: 1.15;
+  color: #704245;
+  margin: 0 0 20px;
+}
+
+.hero p {
+  max-width: 530px;
+  margin: 0 auto 28px;
+  color: #806e67;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .cta-btn {
-    display: inline-block !important; 
-    background-color: #c97a7e !important; /* Deep rose brand color */
-    color: #ffffff !important; /* Crisp white text */
-    padding: 12px 28px; 
-    text-decoration: none; 
-    border-radius: 30px; 
-    font-weight: bold;
-    box-shadow: 0 4px 12px rgba(201, 122, 126, 0.2);
-    text-align: center;
+  display: inline-block;
+  background-color: #c97a7e;
+  color: #ffffff;
+  padding: 13px 24px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(201, 122, 126, 0.2);
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
+
 .cta-btn:hover {
-    background-color: #b3666a !important;
+  background-color: #b3666a;
+  transform: translateY(-2px);
 }
 
-/* 📦 STRUCTURAL CONTAINER PACKAGING */
-.section-container { 
-    max-width: 1000px; 
-    margin: 0 auto; 
-    padding: 50px 24px; /* Generous side cushioning for mobile screens */
-    text-align: center; 
+.cta-btn.floating {
+  animation: floatAnimation 3s ease-in-out infinite;
 }
 
-.alternative-bg { background-color: #f5efe6; max-width: 100%; }
-.section-subtitle { margin-bottom: 35px; color: #8c7674; font-size: 0.95rem; }
-
-/* CARD STRUCTURES & IMAGES */
-.grid { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 30px; 
-    text-align: left; 
+.secondary-btn {
+  display: inline-block;
+  padding: 12px 23px;
+  border: 1px solid #c97a7e;
+  border-radius: 30px;
+  color: #a66e72;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
-.card { 
-    background: #ffffff; 
-    padding: 24px; 
-    border-radius: 16px; 
-    border: 1px solid #ebdcd0;
-    box-shadow: 0 4px 6px rgba(112, 66, 69, 0.01);
+.secondary-btn:hover {
+  background: #f3e6de;
+}
+
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
+
+.section-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 24px;
+  text-align: center;
+}
+
+.alternative-bg {
+  background-color: #f5efe6;
+  max-width: 100%;
+}
+
+.section-subtitle {
+  margin-bottom: 35px;
+  color: #8c7674;
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   PRODUCT CARDS AND IMAGES
+   ========================================= */
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+}
+
+.card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #ebdcd0;
+  box-shadow: 0 4px 6px rgba(112, 66, 69, 0.04);
 }
 
 .img-container {
-    width: 100%;
-    height: 220px;
-    background-color: #f5efe6;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    overflow: hidden;
+  width: 100%;
+  height: 220px;
+  background-color: #f5efe6;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  overflow: hidden;
 }
 
 .img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.tag { 
-    display: inline-block; 
-    background: #fdf2f2; 
-    color: #c97a7e; 
-    padding: 4px 12px; 
-    border-radius: 15px; 
-    font-size: 0.8rem; 
-    font-weight: bold;
-    margin-top: 10px;
+.tag {
+  display: inline-block;
+  background: #fdf2f2;
+  color: #c97a7e;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-/* 💝 GIFT & FORMS GRID ALIGNMENT */
+/* =========================================
+   GIFT FEATURES AND PRICING
+   ========================================= */
+
 .gift-box-layout {
-    background: white; 
-    border: 1px solid #ebdcd0; 
-    border-radius: 16px;
-    padding: 24px; 
-    text-align: left; 
-    max-width: 800px; 
-    margin: 0 auto;
-    display: flex; 
-    flex-direction: column; 
-    gap: 25px;
+  background: white;
+  border: 1px solid #ebdcd0;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.gift-feature ul { padding-left: 20px; color: #5c4e4d; }
-.gift-feature li { margin-bottom: 8px; }
-.price-display { font-size: 1.15rem; color: #704245; margin: 10px 0; }
-
-/* 🛍️ ORDER FORM STYLING BOX */
-.order-container {
-    max-width: 550px;
-    margin: 0 auto;
-    padding: 24px;
-    background-color: #ffffff;
-    border: 1px solid #ebdcd0;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(112, 66, 69, 0.02);
+.gift-feature {
+  flex: 1;
 }
 
-.order-container h2 { color: #704245; margin-bott
-/* COZY HEIRLOOM - VISUAL GIFT TABLE */
+.gift-feature ul {
+  padding-left: 20px;
+  color: #5c4e4d;
+}
+
+.gift-feature li {
+  margin-bottom: 8px;
+}
+
+.price-display {
+  font-size: 1.15rem;
+  color: #704245;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+/* =========================================
+   GIFT COLLECTION
+   ========================================= */
+
+.gift-collection {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.gift-eyebrow {
+  color: #a66e72;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.gift-collection h2 {
+  font-family: Georgia, serif;
+  color: #704245;
+  font-size: 2rem;
+  margin: 12px 0;
+}
+
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1050px;
+  margin: 35px auto 0;
+  text-align: left;
+}
+
+.gift-card {
+  background: #ffffff;
+  border: 1px solid #ebdcd0;
+  border-radius: 16px;
+  padding: 27px 22px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 18px rgba(112, 66, 69, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gift-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(112, 66, 69, 0.10);
+}
+
+.gift-icon {
+  font-size: 35px;
+  margin-bottom: 18px;
+}
+
+.gift-number {
+  color: #b77c80;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.gift-card h3 {
+  font-family: Georgia, serif;
+  color: #704245;
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+.gift-description {
+  color: #806e67;
+  font-size: 13px;
+  min-height: 55px;
+}
+
+.gift-card ul {
+  padding-left: 18px;
+  color: #5c4e4d;
+  font-size: 13px;
+  line-height: 1.8;
+  flex-grow: 1;
+}
+
+.gift-card li {
+  margin-bottom: 7px;
+}
+
+.gift-price {
+  color: #704245;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.gift-btn {
+  display: block;
+  text-align: center;
+  background: #c97a7e;
+  color: white;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 12px;
+  transition: background 0.2s ease;
+}
+
+.gift-btn:hover {
+  background: #a95f64;
+}
+
+.featured-gift {
+  background: #fffaf7;
+  border: 1px solid #d9b2ae;
+}
+
+.gift-footer-note {
+  color: #8c7674;
+  font-size: 13px;
+  margin-top: 30px;
+}
+
+/* =========================================
+   CUSTOM GIFT SECTION
+   ========================================= */
+
+.custom-gift-section {
+  background: #faf7f2;
+}
+
+.custom-gift-section h2 {
+  font-family: Georgia, serif;
+  color: #704245;
+  font-size: 2rem;
+  margin: 12px 0;
+}
+
+.custom-gift-box {
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #ebdcd0;
+  border-radius: 18px;
+  text-align: left;
+  box-shadow: 0 6px 22px rgba(112, 66, 69, 0.06);
+}
+
+.custom-gift-intro {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #f0e5df;
+}
+
+.custom-gift-emoji {
+  font-size: 42px;
+}
+
+.custom-gift-intro h3,
+.custom-gift-summary h3 {
+  font-family: Georgia, serif;
+  color: #704245;
+}
+
+.custom-gift-intro p {
+  color: #8c7674;
+  font-size: 14px;
+}
+
+.custom-gift-box .form-group {
+  margin-bottom: 20px;
+}
+
+.custom-gift-box .form-group label {
+  font-size: 14px;
+}
+
+.custom-gift-box select,
+.custom-gift-box textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ebdcd0;
+  border-radius: 9px;
+  background: #faf7f2;
+  color: #4a3e3d;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.custom-gift-box select:focus,
+.custom-gift-box textarea:focus {
+  outline: none;
+  border-color: #c97a7e;
+  background: white;
+}
+
+.custom-gift-summary {
+  background: #fdf5f1;
+  border: 1px solid #efdcd5;
+  padding: 18px;
+  border-radius: 12px;
+  margin: 25px 0;
+}
+
+.custom-gift-summary h3 {
+  margin-top: 0;
+}
+
+.custom-gift-summary p {
+  color: #806e67;
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.custom-gift-note {
+  text-align: center;
+  font-size: 12px;
+  color: #8c7674;
+  margin-top: 15px;
+}
+
+/* =========================================
+   VISUAL GIFT STUDIO
+   ========================================= */
 
 .gift-studio {
   padding: 65px 18px;
-  background: #faf4ef;
+  background: linear-gradient(145deg, #faf7f2, #f3e6de);
   text-align: center;
   overflow: hidden;
 }
@@ -189,7 +527,7 @@ nav a:hover { color: #c97a7e; }
 
 .studio-heading h2 {
   font-family: Georgia, serif;
-  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
   color: #704245;
   margin: 12px 0;
 }
@@ -199,79 +537,153 @@ nav a:hover { color: #c97a7e; }
   line-height: 1.7;
 }
 
-.gift-table {
-  position: relative;
-  max-width: 850px;
-  min-height: 570px;
+.studio-layout {
+  max-width: 950px;
   margin: auto;
-  border-radius: 28px;
-  background:
-    radial-gradient(ellipse at center, #fffaf6 0%, #f5e7df 75%);
-  border: 1px solid #ead6d0;
-  box-shadow: 0 15px 40px rgba(112,66,69,.08);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 25px;
+  align-items: stretch;
 }
 
-/* THE OPEN GIFT BOX */
+.gift-items,
+.gift-box-area {
+  background: rgba(255, 255, 255, 0.72);
+  padding: 25px;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(112, 66, 69, 0.08);
+}
+
+.gift-items h3,
+.gift-box-area h3 {
+  color: #704245;
+  font-family: Georgia, serif;
+  font-size: 1.35rem;
+}
+
+.gift-items > p,
+.gift-box-area > p {
+  color: #8c7674;
+  line-height: 1.7;
+}
+
+/* =========================================
+   GIFT TABLE AND CARDBOARD BOX
+   ========================================= */
+
+.gift-table {
+  position: relative;
+  min-height: 680px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 25px;
+  background: radial-gradient(
+    ellipse at center,
+    #fffaf5,
+    #f0e2d8
+  );
+  border: 1px solid #ead6d0;
+  box-shadow: 0 15px 40px rgba(112, 66, 69, 0.08);
+}
+
+/* Main cardboard box body */
 
 .visual-gift-box {
+  display: block;
   position: absolute;
-  width: 290px;
-  height: 265px;
+  width: 340px;
+  height: 275px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: #d99a9b;
-  border: 9px solid #bd777d;
-  border-radius: 12px;
-  box-shadow: 0 13px 0 #a9636b, 0 20px 30px #70424530;
+  background: linear-gradient(135deg, #c99a6b, #a9784c);
+  border: 8px solid #93633e;
+  border-radius: 5px;
+  box-shadow:
+    0 12px 0 #815533,
+    0 25px 35px rgba(75, 48, 28, 0.28);
   z-index: 2;
-  transition: .25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.box-inner {
+/* Back cardboard flap */
+
+.visual-gift-box::before {
+  content: "";
   position: absolute;
-  inset: 13px;
-  background: #f8e5dc;
-  border: 2px solid #e4b6ae;
+  width: calc(100% + 36px);
+  height: 75px;
+  left: -18px;
+  top: -76px;
+  background: linear-gradient(180deg, #e0bd95, #bc8c5e);
+  border: 5px solid #a9794c;
+  border-radius: 5px 5px 0 0;
+  transform: perspective(300px) rotateX(-12deg);
+  transform-origin: bottom;
+  box-shadow: 0 -5px 10px rgba(75, 48, 28, 0.12);
+}
+
+/* Front folded cardboard flap */
+
+.visual-gift-box::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 16px);
+  height: 38px;
+  left: -8px;
+  bottom: -38px;
+  background: linear-gradient(180deg, #c99a6b, #a9784c);
+  border: 5px solid #93633e;
+  border-top: 2px solid #e2bd94;
+  border-radius: 0 0 4px 4px;
+}
+
+/* Inside of the gift box */
+
+.visual-gift-box .box-inner {
+  position: absolute;
+  inset: 18px;
+  background: linear-gradient(145deg, #8d6243, #b88a61);
+  border: 7px solid #d3a778;
+  box-shadow: inset 0 8px 16px rgba(55, 34, 19, 0.35);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 12px;
   overflow: hidden;
+  z-index: 2;
+  padding: 12px;
+}
+
+.visual-gift-box .box-ribbon {
+  display: none;
 }
 
 .box-title {
+  color: #fff1df;
   font-family: Georgia, serif;
-  color: #704245;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  text-shadow: 0 2px 4px #50351f;
 }
 
 .box-hint {
-  color: #a17c79;
-  font-size: .85rem;
+  color: #f8e7d4;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
-.box-ribbon {
-  position: absolute;
-  width: 35px;
-  height: 100%;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  background: #f1c6bd;
-  opacity: .7;
-  pointer-events: none;
-}
+/* Selected items inside the box */
 
 #gift-box-items {
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
   margin: 12px 0;
-  position: relative;
-  z-index: 3;
 }
 
 .inside-gift {
@@ -279,21 +691,37 @@ nav a:hover { color: #c97a7e; }
   padding: 8px;
   border-radius: 12px;
   color: #704245;
-  font-size: .8rem;
-  box-shadow: 0 3px 8px #70424520;
+  font-size: 0.8rem;
+  box-shadow: 0 3px 8px rgba(112, 66, 69, 0.12);
 }
 
-/* SCATTERED GIFT OBJECTS */
+.selected-gift {
+  background: #f3e6de;
+  color: #704245;
+  border: 1px solid #c97a7e;
+  border-radius: 30px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  animation: giftPop 0.35s ease;
+}
+
+.selected-gift:hover {
+  background: #ead6d0;
+}
+
+/* =========================================
+   GIFT OBJECTS AND PRODUCT PHOTOS
+   ========================================= */
 
 .gift-object {
   position: absolute;
-  width: 125px;
-  min-height: 115px;
-  padding: 10px;
-  border-radius: 20px;
-  background: #fffaf7;
-  border: 1px solid #ead6d0;
-  box-shadow: 0 7px 18px #70424518;
+  width: 145px;
+  min-height: 145px;
+  padding: 5px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -301,30 +729,70 @@ nav a:hover { color: #c97a7e; }
   gap: 5px;
   cursor: grab;
   user-select: none;
-  touch-action: none;
   z-index: 4;
-  transition: box-shadow .2s, transform .2s;
-}
-
-.gift-object:hover {
-  transform: translateY(-5px) rotate(-2deg);
-  box-shadow: 0 12px 22px #70424525;
+  transition: transform 0.25s ease;
 }
 
 .gift-object:active {
   cursor: grabbing;
 }
 
-.object-art {
-  font-size: 3.4rem;
-  line-height: 1.3;
+.gift-object:hover {
+  z-index: 5;
+}
+
+.product-photo {
+  width: 130px;
+  height: 115px;
+  background: #fffaf6;
+  border: 1px solid #ead6d0;
+  border-radius: 14px;
+  box-shadow: 0 7px 18px rgba(112, 66, 69, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.photo-placeholder {
+  padding: 10px;
+  color: #9b7772;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Scrapbook stickers */
+
+.sticker-art {
+  display: block;
+  width: 130px;
+  height: 130px;
+  overflow: visible;
+  filter: drop-shadow(2px 5px 4px rgba(112, 66, 69, 0.17));
+  transition: transform 0.25s ease;
+}
+
+.gift-object:hover .sticker-art {
+  transform: translateY(-5px) rotate(-4deg);
 }
 
 .object-name {
-  font-size: .78rem;
+  display: block;
+  margin-top: 7px;
   color: #704245;
+  font-size: 12px;
   font-weight: 600;
+  text-align: center;
 }
+
+/* Gift object positions */
 
 .bouquet-object {
   left: 7%;
@@ -359,22 +827,28 @@ nav a:hover { color: #c97a7e; }
 .gift-object.is-dragging {
   z-index: 20;
   transform: scale(1.08);
-  box-shadow: 0 15px 30px #70424535;
 }
 
 .visual-gift-box.drag-over {
   transform: translate(-50%, -50%) scale(1.04);
-  box-shadow: 0 0 0 5px #c97a7e50, 0 13px 0 #a9636b;
+  box-shadow:
+    0 0 0 5px rgba(201, 122, 126, 0.3),
+    0 12px 0 #815533;
 }
 
+/* =========================================
+   GIFT STUDIO FOOTER AND BUTTONS
+   ========================================= */
+
 .gift-studio-footer {
-  max-width: 650px;
+  max-width: 700px;
   margin: 30px auto 0;
 }
 
 #studio-summary {
   color: #704245;
   line-height: 1.8;
+  margin-bottom: 20px;
 }
 
 .clear-gift-btn {
@@ -385,581 +859,14 @@ nav a:hover { color: #c97a7e; }
   color: #704245;
   border-radius: 25px;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-/* MOBILE */
-
-@media(max-width: 600px) {
-  .gift-table {
-    min-height: 510px;
-  }
-
-  .visual-gift-box {
-    width: 215px;
-    height: 220px;
-  }
-
-  .gift-object {
-    width: 95px;
-    min-height: 90px;
-    padding: 7px;
-  }
-
-  .object-art {
-    font-size: 2.5rem;
-  }
-
-  .object-name {
-    font-size: .68rem;
-  }
-
-  .bouquet-object { left: 2%; top: 5%; }
-  .chocolate-object { right: 2%; top: 5%; }
-  .bag-object { left: 2%; bottom: 7%; }
-  .note-object { right: 2%; bottom: 7%; }
-  .ribbon-object { bottom: 0; }
-}
-
-.order-container p { color: #8c7674; text-align: center; margin-bottom: 24px; font-size: 13px; }
-
-.form-group { margin-bottom: 18px; text-align: left; }
-.form-group label { display: block; margin-bottom: 6px; font-weight: bold; color: #704245; font-size: 13px; }
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ebdcd0;
-    border-radius: 8px;
-    font-size: 16px;
-    box-sizing: border-box;
-    background-color: #faf7f2;
-    font-family: inherit;
-    color: #4a3e3d;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #c97a7e;
-    background-color: #ffffff;
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 14px;
-    background-color: #c97a7e;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-.submit-btn:hover {
-    background-color: #b3666a;
-}
-
-/* ✕ FAQ ACCORDIONS */
-.faq-container { max-width: 700px; margin: 0 auto; text-align: left; }
-.faq-item { background: #ffffff; border: 1px solid #ebdcd0; border-radius: 12px; margin-bottom: 12px; padding: 15px 20px; }
-.faq-item summary { font-weight: bold; color: #704245; cursor: pointer; outline: none; }
-.faq-answer { margin-top: 10px; border-top: 1px solid #f5efe6; padding-top: 10px; color: #6e5d5c; font-size: 0.95rem; }
-
-/* FOOTER AND TRUST */
-.trust-section { max-width: 700px; margin: 0 auto; }
-.insta-btn {
-    display: inline-block; 
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
-    color: #ffffff !important; 
-    text-decoration: none; 
-    padding: 14px 28px; 
-    border-radius: 30px; 
-    font-weight: bold; 
-    margin-top: 15px;
-    box-shadow: 0 4px 15px rgba(220, 39, 67, 0.2);
-    text-align: center;
-}
-
-.eco-note { font-size: 0.8rem; color: #8c7674; margin-top: 10px; }
-
-footer { text-align: center; padding: 35px 20px; background-color: #ffffff; color: #a89492; border-top: 1px solid #ebdcd0; }
-
-/* 📱 RESPONSIVE TABLET/DESKTOP BREAKPOINT */
-@media (min-width: 750px) {
-    .grid { flex-direction: row; }
-    .gift-box-layout { flex-direction: row; }
-    .gift-feature { flex: 1; }
-    .hero h1 { font-size: 2.6rem; }
-}
-/* Premium Pricing Callout Styles */
-.price-display {
-    font-size: 1.15rem;
-    color: #704245;
-    font-weight: bold;
-    margin: 8px 0;
-}
-
-/* ========================================== */
-/* ✨ PREMIUM USER EXPERIENCE POLISHINGS      */
-/* ========================================== */
-
-/* Soft glow animation when clicking input text fields */
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #c97a7e;
-    background-color: #ffffff;
-    box-shadow: 0 0 8px rgba(201, 122, 126, 0.25);
-    transition: all 0.3s ease;
-}
-
-/* Custom styling to make the item selection dropdown look cleaner on phones */
-.form-group select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='10' height='10' viewBox='0 0 10 10'><path d='M0 3l5 5 5-5z' fill='%23704245'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    background-size: 12px;
-    padding-right: 40px;
-}
-
-/* Subtle pulse shadow on the main WhatsApp navigation shortcut button */
-@keyframes whatsappPulse {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
-    70% { box-shadow: 0 0 0 8px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-
-.whatsapp-nav-btn {
-    animation: whatsappPulse 2s infinite;
-}
-
-/* Prevents users from accidentally magnifying the viewport scale on mobile input taps */
-@media screen and (max-width: 768px) {
-    input, select, textarea {
-        font-size: 16px !important;
-    }
-}
-/* ✨ FLOATING BUTTON ANIMATION */
-@keyframes floatAnimation {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-6px); }
-    100% { transform: translateY(0px); }
-}
-
-/* Apply the animation to the CTA button */
-.cta-btn.floating {
-    animation: floatAnimation 3s ease-in-out infinite;
-    display: inline-block !important; /* Ensures the transform properties move smoothly */
-}
-
-/* ===== COZY HEIRLOOM HERO UPGRADE ===== */
-
-.hero {
-    padding: 85px 22px;
-    background: linear-gradient(
-        135deg,
-        #faf7f2 0%,
-        #f3e6de 55%,
-        #f8eeea 100%
-    );
-    text-align: center;
-    border-bottom: 1px solid #ebdcd0;
-}
-
-.hero-content {
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-.hero-label {
-    display: inline-block;
-    color: #a66e72;
-    font-size: 11px;
-    letter-spacing: 2px;
-    font-weight: 700;
-    margin-bottom: 18px;
-}
-
-.hero h1 {
-    font-family: Georgia, serif;
-    font-size: clamp(2.3rem, 6vw, 3.8rem);
-    line-height: 1.15;
-    color: #704245;
-    margin: 0 0 20px;
-}
-
-.hero p {
-    max-width: 530px;
-    margin: 0 auto 28px;
-    color: #806e67;
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.hero-buttons .cta-btn {
-    padding: 13px 24px;
-}
-
-.secondary-btn {
-    display: inline-block;
-    padding: 12px 23px;
-    border: 1px solid #c97a7e;
-    border-radius: 30px;
-    color: #a66e72;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.secondary-btn:hover {
-    background: #f3e6de;
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 65px 18px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .hero-buttons a {
-        width: 100%;
-        max-width: 270px;
-    }
-}
-
-/* ===== COZY HEIRLOOM GIFT COLLECTION ===== */
-
-.gift-collection {
-    padding-top: 65px;
-    padding-bottom: 65px;
-}
-
-.gift-eyebrow {
-    color: #a66e72;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.gift-collection h2 {
-    font-family: Georgia, serif;
-    color: #704245;
-    font-size: 2rem;
-    margin: 12px 0;
-}
-
-.gift-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-    max-width: 1050px;
-    margin: 35px auto 0;
-    text-align: left;
-}
-
-.gift-card {
-    background: #fff;
-    border: 1px solid #ebdcd0;
-    border-radius: 16px;
-    padding: 27px 22px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 5px 18px rgba(112, 66, 69, 0.05);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.gift-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(112, 66, 69, 0.10);
-}
-
-.gift-icon {
-    font-size: 35px;
-    margin-bottom: 18px;
-}
-
-.gift-number {
-    color: #b77c80;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.gift-card h3 {
-    font-family: Georgia, serif;
-    color: #704245;
-    font-size: 1.4rem;
-    margin: 10px 0;
-}
-
-.gift-description {
-    color: #806e67;
-    font-size: 13px;
-    min-height: 55px;
-}
-
-.gift-card ul {
-    padding-left: 18px;
-    color: #5c4e4d;
-    font-size: 13px;
-    line-height: 1.8;
-    flex-grow: 1;
-}
-
-.gift-card li {
-    margin-bottom: 7px;
-}
-
-.gift-price {
-    color: #704245;
-    font-weight: bold;
-    font-size: 14px;
-    margin-top: 15px;
-}
-
-.gift-btn {
-    display: block;
-    text-align: center;
-    background: #c97a7e;
-    color: white;
-    text-decoration: none;
-    padding: 12px 15px;
-    border-radius: 25px;
-    font-size: 13px;
-    font-weight: bold;
-    margin-top: 12px;
-    transition: background 0.2s ease;
-}
-
-.gift-btn:hover {
-    background: #a95f64;
-}
-
-.featured-gift {
-    background: #fffaf7;
-    border: 1px solid #d9b2ae;
-}
-
-.gift-footer-note {
-    color: #8c7674;
-    font-size: 13px;
-    margin-top: 30px;
-}
-
-@media (max-width: 750px) {
-    .gift-grid {
-        grid-template-columns: 1fr;
-        max-width: 430px;
-    }
-
-    .gift-description {
-        min-height: auto;
-    }
-
-    .gift-card {
-        padding: 25px;
-    }
-}
-
-/* ===== BUILD YOUR OWN GIFT ===== */
-
-.custom-gift-section {
-    background: #faf7f2;
-}
-
-.custom-gift-section h2 {
-    font-family: Georgia, serif;
-    color: #704245;
-    font-size: 2rem;
-    margin: 12px 0;
-}
-
-.custom-gift-box {
-    max-width: 600px;
-    margin: 30px auto 0;
-    padding: 28px;
-    background: #fff;
-    border: 1px solid #ebdcd0;
-    border-radius: 18px;
-    text-align: left;
-    box-shadow: 0 6px 22px rgba(112, 66, 69, 0.06);
-}
-
-.custom-gift-intro {
-    text-align: center;
-    padding-bottom: 20px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #f0e5df;
-}
-.custom-gift-emoji {
-    font-size: 42px;
-}
-
-.custom-gift-intro h3,
-.custom-gift-summary h3 {
-    font-family: Georgia, serif;
-    color: #704245;
-}
-
-.custom-gift-intro p {
-    color: #8c7674;
-    font-size: 14px;
-}
-
-.custom-gift-box .form-group {
-    margin-bottom: 20px;
-}
-
-.custom-gift-box .form-group label {
-    font-size: 14px;
-}
-
-.custom-gift-box select,
-.custom-gift-box textarea {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #ebdcd0;
-    border-radius: 9px;
-    background: #faf7f2;
-    color: #4a3e3d;
-    font-family: inherit;
-    font-size: 15px;
-}
-
-.custom-gift-box select:focus,
-.custom-gift-box textarea:focus {
-    outline: none;
-    border-color: #c97a7e;
-    background: white;
-}
-
-.custom-gift-summary {
-    background: #fdf5f1;
-    border: 1px solid #efdcd5;
-    padding: 18px;
-    border-radius: 12px;
-    margin: 25px 0;
-}
-
-.custom-gift-summary h3 {
-    margin-top: 0;
-}
-
-.custom-gift-summary p {
-    color: #806e67;
-    font-size: 14px;
-    line-height: 1.8;
-    white-space: pre-line;
-}
-
-.custom-gift-note {
-    text-align: center;
-    font-size: 12px;
-    color: #8c7674;
-    margin-top: 15px;
-}
-
-@media (max-width: 480px) {
-    .custom-gift-box {
-        padding: 20px;
-    }
-}
-
-/* COZY HEIRLOOM GIFT STUDIO */
-
-.gift-studio {
-  padding: 65px 20px;
-  background: linear-gradient(145deg, #faf7f2, #f3e6de);
-  text-align: center;
-}
-
-.studio-heading {
-  max-width: 650px;
-  margin: 0 auto 40px;
-}
-
-.studio-heading h2 {
-  font-family: Georgia, serif;
-  font-size: 2.2rem;
-  color: #704245;
-  margin: 12px 0;
-}
-
-.studio-heading p,
-.gift-items > p,
-.gift-box-area > p {
-  color: #8c7674;
-  line-height: 1.7;
-}
-
-.studio-layout {
-  max-width: 950px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 25px;
-  align-items: stretch;
-}
-
-.gift-items,
-.gift-box-area {
-  background: rgba(255,255,255,0.72);
-  padding: 25px;
-  border-radius: 22px;
-  box-shadow: 0 8px 25px rgba(112,66,69,0.08);
-}
-
-.gift-items h3,
-.gift-box-area h3 {
-  color: #704245;
-  font-family: Georgia, serif;
-  font-size: 1.35rem;
-}
-
-.gift-item {
-  width: 100%;
-  margin: 9px 0;
-  padding: 14px;
-  border: 1px solid #ead6d0;
-  border-radius: 14px;
-  background: #fffaf7;
-  color: #704245;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: grab;
-  transition: 0.25s ease;
-}
-
-.gift-item:hover {
-  transform: translateY(-3px);
+.clear-gift-btn:hover {
   background: #f3e6de;
-  box-shadow: 0 5px 14px rgba(112,66,69,0.10);
 }
 
-.gift-item:active {
-  cursor: grabbing;
-}
+/* Alternative gift studio layout */
 
 .gift-box {
   min-height: 260px;
@@ -990,45 +897,216 @@ footer { text-align: center; padding: 35px 20px; background-color: #ffffff; colo
   color: #8c7674;
 }
 
-#gift-box-items {
+.gift-item {
+  width: 100%;
+  margin: 9px 0;
+  padding: 14px;
+  border: 1px solid #ead6d0;
+  border-radius: 14px;
+  background: #fffaf7;
+  color: #704245;
+  font-size: 1rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
+  cursor: grab;
+  transition: 0.25s ease;
 }
 
-.selected-gift {
+.gift-item:hover {
+  transform: translateY(-3px);
   background: #f3e6de;
+  box-shadow: 0 5px 14px rgba(112, 66, 69, 0.10);
+}
+
+/* =========================================
+   ORDER FORM
+   ========================================= */
+
+.order-container {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #ebdcd0;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(112, 66, 69, 0.04);
+}
+
+.order-container h2 {
   color: #704245;
-  border: 1px solid #c97a7e;
-  border-radius: 30px;
-  padding: 10px 15px;
-  cursor: pointer;
-  animation: giftPop 0.35s ease;
+  margin-bottom: 15px;
 }
 
-.selected-gift:hover {
-  background: #ead6d0;
-}
-
-.clear-gift-btn {
-  background: transparent;
+.order-container p {
   color: #8c7674;
-  border: 1px solid #c97a7e;
-  padding: 9px 20px;
-  border-radius: 25px;
-  cursor: pointer;
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 13px;
 }
 
-.gift-studio-footer {
-  max-width: 700px;
-  margin: 30px auto 0;
+.form-group {
+  margin-bottom: 18px;
+  text-align: left;
 }
 
-#studio-summary {
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
   color: #704245;
-  line-height: 1.8;
-  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ebdcd0;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #faf7f2;
+  font-family: inherit;
+  color: #4a3e3d;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #c97a7e;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(201, 122, 126, 0.25);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #c97a7e;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #b3666a;
+}
+
+/* =========================================
+   FAQ SECTION
+   ========================================= */
+
+.faq-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #ebdcd0;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  padding: 15px 20px;
+}
+
+.faq-item summary {
+  font-weight: bold;
+  color: #704245;
+  cursor: pointer;
+  outline: none;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  border-top: 1px solid #f5efe6;
+  padding-top: 10px;
+  color: #6e5d5c;
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   INSTAGRAM AND FOOTER
+   ========================================= */
+
+.trust-section {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.insta-btn {
+  display: inline-block;
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 15px;
+  box-shadow: 0 4px 15px rgba(220, 39, 67, 0.2);
+  text-align: center;
+}
+
+.eco-note {
+  font-size: 0.8rem;
+  color: #8c7674;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  background-color: #ffffff;
+  color: #a89492;
+  border-top: 1px solid #ebdcd0;
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes giftPop {
@@ -1036,13 +1114,39 @@ footer { text-align: center; padding: 35px 20px; background-color: #ffffff; colo
     opacity: 0;
     transform: scale(0.7);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
 
-@media (max-width: 700px) {
+/* =========================================
+   TABLET RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 750px) {
+  .gift-grid {
+    grid-template-columns: 1fr;
+    max-width: 430px;
+  }
+
+  .gift-description {
+    min-height: auto;
+  }
+
+  .gift-card {
+    padding: 25px;
+  }
+
+  .grid {
+    flex-direction: column;
+  }
+
+  .gift-box-layout {
+    flex-direction: column;
+  }
+
   .studio-layout {
     grid-template-columns: 1fr;
   }
@@ -1056,248 +1160,6 @@ footer { text-align: center; padding: 35px 20px; background-color: #ffffff; colo
   }
 }
 
-/* REALISTIC OPEN CARDBOARD GIFT BOX */
-
-.gift-table {
-  position: relative;
-  min-height: 680px;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 25px;
-  background:
-    radial-gradient(ellipse at center, #fffaf5, #f0e2d8);
-}
-
-/* Main cardboard box body */
-.visual-gift-box {
-  display: block;
-  position: absolute;
-  width: 340px;
-  height: 275px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(
-    135deg,
-    #c99a6b,
-    #a9784c
-  );
-  border: 8px solid #93633e;
-  border-radius: 5px;
-  box-shadow:
-    0 12px 0 #815533,
-    0 25px 35px rgba(75, 48, 28, 0.28);
-  z-index: 2;
-}
-
-/* Back cardboard flap */
-.visual-gift-box::before {
-  content: "";
-  position: absolute;
-  width: calc(100% + 36px);
-  height: 75px;
-  left: -18px;
-  top: -76px;
-  background: linear-gradient(
-    180deg,
-    #e0bd95,
-    #bc8c5e
-  );
-  border: 5px solid #a9794c;
-  border-radius: 5px 5px 0 0;
-  transform: perspective(300px) rotateX(-12deg);
-  transform-origin: bottom;
-  box-shadow: 0 -5px 10px rgba(75,48,28,.12);
-}
-
-/* Front folded cardboard flap */
-.visual-gift-box::after {
-  content: "";
-  position: absolute;
-  width: calc(100% + 16px);
-  height: 38px;
-  left: -8px;
-  bottom: -38px;
-  background: linear-gradient(
-    180deg,
-    #c99a6b,
-    #a9784c
-  );
-  border: 5px solid #93633e;
-  border-top: 2px solid #e2bd94;
-  border-radius: 0 0 4px 4px;
-}
-
-/* Deep inside of the box */
-.visual-gift-box .box-inner {
-  position: absolute;
-  inset: 18px;
-  background: linear-gradient(
-    145deg,
-    #8d6243,
-    #b88a61
-  );
-  border: 7px solid #d3a778;
-  box-shadow:
-    inset 0 8px 16px rgba(55,34,19,.35);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  z-index: 2;
-  padding: 12px;
-}
-
-/* Hide the old flat ribbon */
-.visual-gift-box .box-ribbon {
-  display: none;
-}
-
-.box-title {
-  color: #fff1df;
-  font-family: Georgia, serif;
-  font-size: 1.25rem;
-  text-shadow: 0 2px 4px #50351f;
-}
-
-.box-hint {
-  color: #f8e7d4;
-  font-size: .85rem;
-}
-
-#gift-box-items {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-}
-
-/* Mobile box sizing */
-@media (max-width: 600px) {
-  .gift-table {
-    min-height: 590px;
-  }
-
-  .visual-gift-box {
-    width: 245px;
-    height: 220px;
-  }
-
-  .visual-gift-box::before {
-    height: 55px;
-    top: -56px;
-  }
-
-  .visual-gift-box::after {
-    height: 28px;
-    bottom: -28px;
-  }
-}
-
-/* PRODUCT PHOTOGRAPH DISPLAY AREAS */
-
-.gift-object {
-  width: 145px;
-  min-height: 155px;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 5px;
-}
-
-.product-photo {
-  width: 130px;
-  height: 115px;
-  background: #fffaf6;
-  border: 1px solid #ead6d0;
-  border-radius: 14px;
-  box-shadow: 0 7px 18px rgba(112,66,69,.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.photo-placeholder {
-  padding: 10px;
-  color: #9b7772;
-  font-family: Georgia, serif;
-  font-size: 12px;
-  text-align: center;
-}
-
-.product-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.object-name {
-  display: block;
-  margin-top: 7px;
-  color: #704245;
-  font-size: 12px;
-  text-align: center;
-}
-
-@media(max-width:600px) {
-  .gift-object {
-    width: 105px;
-    min-height: 120px;
-  }
-
-  .product-photo {
-    width: 95px;
-    height: 85px;
-  }
-}
-
-/* SCRAPBOOK GIFT ELEMENTS */
-
-.gift-object {
-  width: 145px;
-  min-height: 145px;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 5px;
-  cursor: grab;
-  touch-action: none;
-}
-
-.sticker-art {
-  display: block;
-  width: 130px;
-  height: 130px;
-  overflow: visible;
-  filter: drop-shadow(2px 5px 4px rgba(112,66,69,.17));
-  transition: transform .25s ease;
-}
-
-.gift-object:hover .sticker-art {
-  transform: translateY(-5px) rotate(-4deg);
-}
-
-.gift-object .object-name {
-  color: #704245;
-  font-size: 12px;
-  font-weight: 600;
-  text-align: center;
-}
-
-@media(max-width:600px) {
-  .gift-object {
-    width: 105px;
-    min-height: 115px;
-  }
-
-    .sticker-art {
-    width: 95px;
-    height: 95px;
-  }
-}  
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
