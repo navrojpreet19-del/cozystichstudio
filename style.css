@@ -310,3 +310,89 @@ footer { text-align: center; padding: 35px 20px; background-color: #ffffff; colo
     animation: floatAnimation 3s ease-in-out infinite;
     display: inline-block !important; /* Ensures the transform properties move smoothly */
 }
+
+/* ===== COZY HEIRLOOM HERO UPGRADE ===== */
+
+.hero {
+    padding: 85px 22px;
+    background: linear-gradient(
+        135deg,
+        #faf7f2 0%,
+        #f3e6de 55%,
+        #f8eeea 100%
+    );
+    text-align: center;
+    border-bottom: 1px solid #ebdcd0;
+}
+
+.hero-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.hero-label {
+    display: inline-block;
+    color: #a66e72;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(2.3rem, 6vw, 3.8rem);
+    line-height: 1.15;
+    color: #704245;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    max-width: 530px;
+    margin: 0 auto 28px;
+    color: #806e67;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-buttons .cta-btn {
+    padding: 13px 24px;
+}
+
+.secondary-btn {
+    display: inline-block;
+    padding: 12px 23px;
+    border: 1px solid #c97a7e;
+    border-radius: 30px;
+    color: #a66e72;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background: #f3e6de;
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 65px 18px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        max-width: 270px;
+    }
+}
